@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="UnitCube.io.Views.TabbedPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+
+    <Grid
+        x:Name="ContentArea"
+        Margin="{StaticResource SmallLeftRightMargin}">
+        <Pivot
+            x:Name="Items">
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" Text="{Binding}" />
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <PivotItem x:Uid="Tabbed_PivotItem1">
+                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+                    <StackPanel Grid.Column="0" Margin="40,20,40,40" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <!-- Metric Conversion Name  -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 20 0,0" VerticalAlignment="Top" Width="300" FontWeight="ExtraBold" Text="Metric Units Conversion to Imperial Units" />
+                        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0 10 0 0" VerticalAlignment="Top" Width="252" FontWeight="SemiBold" Text="Cubic Centimeter to Cubic Inches" SelectionChanged="TextBlock_SelectionChanged" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Centimeters..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Margin="0 10 0 0" Content="Convert" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+
+                        <!-- Meters to Feet -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 10 0 0" VerticalAlignment="Top" Width="190" FontWeight="SemiBold" Text="Cubic Meter to Cubic Feet" SelectionChanged="TextBlock_SelectionChanged_1" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Meters..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Content="Convert" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+
+                        <!-- Meters to Yards -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 10 0 0" VerticalAlignment="Top" Width="190" FontWeight="SemiBold" Text="Cubic Meter to Cubic Yards" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Meters..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Content="Convert" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+
+                        <!-- Kilometers to Miles -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 10 0 0" VerticalAlignment="Top" Width="200" FontWeight="SemiBold" Text="Cubic Kilometer to Cubic Miles" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Kilometers..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Content="Convert" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+
+            <PivotItem x:Uid="Tabbed_PivotItem2">
+                <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+                    <!--
+                    Add Imperial to Metric Conversions
+                    -->
+                    <StackPanel Grid.Column="0" Margin="40 20 40 40" VerticalAlignment="Stretch">
+                        <!-- Imperial Conversion Name  -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 20 0 0" VerticalAlignment="Top" Width="300" FontWeight="ExtraBold" Text="Imperial Units Conversion to Metric Units" />
+                        <TextBlock HorizontalAlignment="Left" Height="20" Margin="0 10 0 0" VerticalAlignment="Top" Width="252" FontWeight="SemiBold" Text="Cubic Inch to Cubic Centimeters" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Inches..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Margin="0 10 0 0" Content="Convert" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+
+                        <!-- Feet to Meters -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 10 0 0" VerticalAlignment="Top" Width="190" FontWeight="SemiBold" Text="Cubic Foot to Cubic Meters" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Feet..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Content="Convert" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+
+                        <!-- Yards to Meters -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 10 0 0" VerticalAlignment="Top" Width="190" FontWeight="SemiBold" Text="Cubic Yard to Cubic Yards" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Yards..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Content="Convert" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+
+                        <!-- Miles to Kilometers -->
+                        <TextBlock HorizontalAlignment="Left" Height="25" Margin="0 10 0 0" VerticalAlignment="Top" Width="190" FontWeight="SemiBold" Text="Cubic Mile to Cubic Kilometers" />
+                        <TextBox HorizontalAlignment="Left" Height="35" PlaceholderText="Enter Miles..." VerticalAlignment="Center" Background="GhostWhite" Padding="2" Width="200" />
+                        <Button Height="40" Width="140" Content="Convert" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
