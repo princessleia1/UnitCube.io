@@ -21,7 +21,7 @@
 - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 
 ## License
-**UnitCube.io** is licensed under the [MIT License](/LICENSE).
+**UnitCube.io** is licensed under the [GNU General Public License v3.0](/LICENSE).
 <p align="center">
   <img width="80" height="80" src=icon.png>
 </p>
