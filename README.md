@@ -20,6 +20,9 @@
 - [.NET Core 2.0 SDK](https://www.microsoft.com/net/core)
 - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 
+## Attribution
+**UnitCube.io** Image [icon.png](https://github.com/princessleia1/UnitCube.io/blob/master/icon.png) Attribution [PrincessLeia1](https://github.com/princessleia1).
+
 ## License
 **UnitCube.io** is licensed under the [GNU General Public License v3.0](/LICENSE).
 <p align="center">
